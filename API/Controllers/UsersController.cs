@@ -28,7 +28,7 @@ namespace API.Controllers
             
         }
 
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin, Member, Moderator")]
         [HttpGet]
         public async Task<ActionResult<PagedList<MemberDto>>> GetUsers([FromQuery]UserParams userParams)
         {
